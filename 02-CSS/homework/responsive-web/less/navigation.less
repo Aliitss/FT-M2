@@ -1,1 +1,26 @@
 // Código de Nav acá
+nav {
+    .flex-vertical();
+    align-items: center;
+    background-color: @nav-bg;
+
+    h2 {
+        margin: 3rem;
+    }
+    
+    ul {
+        .flex-horizontal();
+        font-size: 1.75rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+                        
+        li + li {
+            margin-left: 2rem;
+            @media @phone {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+
+    }
+    }
