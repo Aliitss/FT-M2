@@ -1,0 +1,13 @@
+.temp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    
+    justify-content: space-evenly;
+    font-size: 20px;
+    margin-top: 3rem;
+}
+
+.cardsRow {
+    display: flex;
+    gap: auto;
+}

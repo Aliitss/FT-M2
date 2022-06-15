@@ -4,10 +4,11 @@ import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import data, { Cairns } from './data.js';
+import style from './global.module.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.global}>
       <div>
         <Card
           max={Cairns.main.temp_max}
