@@ -1,11 +1,14 @@
 import React from 'react';
-import Logo from '../logoHenry.png'
+
 import SearchBar from './SearchBar.jsx';
 import './Nav.css';
 
 function Nav({onSearch}) {
   return (
-    <div>Nav</div>
+    <div class="Nav">
+      <h1 className='textoNav'> Weather App </h1>
+      <SearchBar onSearch={onSearch} />
+    </div>
   );
 };
 
