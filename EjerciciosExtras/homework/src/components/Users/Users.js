@@ -6,6 +6,14 @@ import './Users.css';
 
 export class Users extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: ""
+    };
+  }
+
+
   render() {
     return (
       <div className="details">
@@ -28,5 +36,18 @@ export class Users extends Component {
   }
 }
 
-export default Users
+export const mapStateToProps = (state) => {
+  return {
+    users: state.users //aca se trae el state de los usuarios (users)
+  };
+};
+
+export const mapDispatchToProps = (dispatch) => {
+    return {
+      getAllUsers: () => dispatch(getAllUsers()) //aca se llama al action creator que se encarga de traer los usuarios (getAllUsers)
+    };
+  }
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Users)
 
