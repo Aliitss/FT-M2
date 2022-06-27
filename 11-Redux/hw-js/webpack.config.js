@@ -1,10 +1,18 @@
-// webpack.config.js`
+const webpack = require("webpack");
+
 module.exports = {
-  entry: './src/index.js', // el punto de arranque de nuestro programa
+  mode: "none",
+  entry: "./src/index.js", // el punto de arranque de nuestro programa
   output: {
-    path: __dirname + '/dist', // el path absoluto para
-    	// el directorio donde queremos que el output sea colocado
-    filename: 'bundle.js' // el nombre del archivo que va a contener
-    	//nuestro output - podemos nombrarlo como queramos pero bundle.js es lo típico
-  }
-}
+    path: __dirname + "/dist", // el path absoluto para
+    // el directorio donde queremos que el output sea colocado
+    filename: "bundle.js", // el nombre del archivo que va a contener
+    //nuestro output - podemos nombrarlo como queramos pero bundle.js es lo típico
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      process: "process/browser",
+    }),
+  ],
+
+};
